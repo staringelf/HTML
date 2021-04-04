@@ -6,8 +6,8 @@
 
 
 h1{
+  margin: .5em 0 1em;
   text-align: center;
-  color: #fff;
 }
 
 button, input, select, textarea {  
@@ -25,7 +25,7 @@ body {
   font  : 1.1rem Arial;
   padding : 0.5em;
   margin  : 0;
-  background-color: #ffc4b2;
+  background-color: #ffc4b295;
 }
 
 form {
