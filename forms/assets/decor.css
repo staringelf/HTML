@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+
+h1{
+  text-align: center;
+  color: #fff;
+}
+
+button, input, select, textarea {  
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.btn{
+  padding: .75em 1.5em;
+}
+
+body {
+  font  : 1.1rem Arial;
+  padding : 0.5em;
+  margin  : 0;
+  background-color: #ffc4b2;
+}
+
+form {
+  position : relative;
+  width: min(600px, 90%);
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow:  0 0 10px rgba(0,0,0,0.15);
+  display: grid;
+  margin-bottom: 5em;
+  background-color: #fff;
+}
+
+.form__buttons{
+  display: flex; 
+  align-items: center;
+}
+
+input:not([type="radio"]):not([type="file"]):not([type="image"]), select{
+  border-radius: 4px;
+  padding: .6em;
+  font-size: .9em;
+}
+
+input:required, select {
+  border:  2px solid #bbb;
+}
+
+input:optional {
+  border:  2px solid #dcdcdc;
+}
+
+input:focus{
+  border:  2px solid #777 !important;
+  outline: none;
+}
+
+form p:not(.unstyled) {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 3fr 5fr;
+}
+
+/*---The filedset and legend---*/
+
+fieldset{
+  position: relative;
+  width: min(80%, 400px);
+}
+
+legend{
+  padding: 0 1em;
+  background-color: #111;
+  color: #eee;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+abbr{
+  border-bottom: none;
+  text-decoration: none;
+  cursor: help;
+}

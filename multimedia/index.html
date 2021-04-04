@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Cinematography</title>
+  <style>
+    
+    body{
+      font-family: Arial, Helvetica, sans-serif; 
+      font-size: clamp(14px, 14px + .1vw, 16px);
+    }
+    
+    img:not(.inexist){
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    figure{
+      margin-bottom: 2em;
+    }
+
+    .figure--contain{
+      width: min(90%, 500px);
+      /* height: 4350px; */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Multimedia in HTML</h1>
+  </header>
+
+  <main role="main">
+    <section>
+      <h2>Images</h2>
+      <figure class="figure--contain">
+        <img src="assets/minimal.jpg" alt="A minimal art gallery">
+        <figcaption>A minimal art gallery</figcaption>
+      </figure>
+  
+      <aside>
+        <h3>Figures</h3>
+        <p>A figure doesn't have to be an image. It is an independent unit of content that:</p>
+        <ul>
+          <li>Expresses your meaning in a compact, easy-to-grasp way.</li>
+          <li>Could go in several places in the page's linear flow.</li>
+          <li>Provides essential information supporting the main text.</li>
+        </ul>  
+      </aside>
+    </section>
+
+    <section>
+      <h2>Videos</h2>
+      <video controls width="480" loop preload="auto" poster="assets/paths.png">
+        <source src="assets/paths-animated.mp4" type="video/mp4">
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="https://www.youtube.com/watch?v=33QDNEL-eaI">link to the video</a> instead.</p>
+      </video>
+    </section>
+
+    <section>
+      <h2>Audio</h2>
+      <audio controls preload=>
+        <source src="assets/music.mp3" type="audio/mp3">
+        <p>Your browser doesn't support HTML5 audio. Here is a <a href="https://www.youtube.com/watch?v=AYeTdojdQnU">link to the audio</a> instead.</p>
+      </audio>
+    </section>
+  </main>
+
+  <section>
+    <h2>Width And Height</h2>
+    <figure>
+      <img class="inexist" src="assets/inexist.jpg" alt="" width="400" height="341">
+      <figcaption>Width and height attributes alllow structuring before images are fetched</figcaption>
+    </figure>
+  </section>
+</body>
+</html>

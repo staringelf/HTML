@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Manish">
+  <title>HTML | Forms</title>
+  <link rel="stylesheet" href="assets/decor.css" type="text/css">  
+</head>
+
+<body>
+  <header>
+    <h1>HTML Forms</h1>
+  </header>
+  <main role="main">
+    <form>
+      <header class="form__header">
+        <h2>Payment Form</h2>
+        <p class="unstyled">Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
+      </header>
+      <section class="form__section">
+        <h3>Contact Information</h3>
+        <p>
+          <label for="name">
+            <span>Name: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="text" id="name" name="name" autocomplete="off" autofocus required>
+        </p>
+        <p>
+          <label for="email">
+            <span>Email: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+          <label for="photo">
+            <span>Photo: </span>
+          </label>
+          <input type="file" name="photo" id="photo" accept="image/*">
+        </p>
+        <p>
+          <label for="password">
+            <span>Password: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="password" id="password" name="password" required>
+        </p>
+      </section>
+
+      <section class="form__section">
+        <h3>Payment Information</h3>
+        <p>
+          <label for="card">
+            <span>Card Type: </span>
+          </label>
+          <select name="card" id="card">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </p>
+        <p>
+          <label for="card-number">
+            <span>Card Number: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="tel" id="card-number" name="card-number" required>
+        </p>
+        <p>
+          <label for="card-expiration">
+            <span>Expiration Date: </span>
+            <strong><abbr title="required">*</abbr></strong>
+            <em>formatted as mm/dd/yyyy</em>
+          </label>
+          <input type="date" id="card-expiration" name="card-expiration" required>
+        </p>
+      </section>
+      <section>
+        <h3>Random Stuff</h3>
+        <p>
+          <label for="myFruit">What's your favorite fruit?</label>
+          <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+          <datalist id="mySuggestion">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+            <option>Mango</option>
+          </datalist>
+        </p>
+        <p>
+          <label for="raw">
+            <span>Choose one raw:</span> 
+          </label>
+          <select name="raw" id="raw">
+            <optgroup label="fruits">
+              <option value="grapes">Grapes</option>
+              <option value="lychee">Lychee</option>
+              <option value="oranges">Oranges</option>
+            </optgroup>
+            <optgroup label="vegetables">
+              <option value="carrot">Carrot</option>
+              <option value="cucumber">Cucumber</option>
+              <option value="Spinach">Spinach</option>
+            </optgroup>
+          </select>
+        </p>
+        <p>
+          <label for="color">
+            <span>Your favourite color: </span>
+          </label>
+          <input type="color" name="color" id="color">
+        </p>
+        <p>
+          <label for="range">
+            <span>Range: </span>
+          </label>
+          <input type="range" name="range" id="range" value="55" min="5" max="100" step="5">
+        </p>
+        <p>
+          <span>Progress: </span>
+          <progress max="100" value="75">75/100</progress>
+        </p>
+        <p>
+          <span>Meter: </span>
+          <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+        </p>
+      </section>
+      <section>
+        <fieldset>
+          <legend>Title</legend>
+          <ul>
+            <li>
+              <label for="liar">
+                <input type="radio" id="liar" name="title" value="liar">
+                The Liar
+              </label>
+            </li>
+            <li>
+              <label for="joker">
+                <input type="radio" id="joker" name="title" value="joker">
+                The Joker
+              </label>
+            </li>
+            <li>
+              <label for="thief">
+                <input type="radio" id="thief" name="title" value="thief">
+                The Thief
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        
+      </section>
+
+      <section class="form__section form__buttons">
+        <p class="unstyled">
+          <button class="btn" type="submit">Validate the payment</button>
+        </p>
+        <p style="margin-left: 1em; margin-right: 1em;" class="unstyled">Or</p>
+        <p style="border: 1px solid #87878787; display: inline-block; background: #aaa" class="unstyled">
+          <input type="image" alt="Validate" src="assets/validate.png" width="30px" height="20px" class="btn--image">
+        </p>
+      </section>
+    </form>
+  </main>
+</body>
+</html>
